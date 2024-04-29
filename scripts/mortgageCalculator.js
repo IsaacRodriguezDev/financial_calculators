@@ -26,9 +26,9 @@ let interestRateIntoDecimal = interestRate /100
 //  calculated how much total cost of interest
 let totalOfAllMonthlyPay = loanTerm * numberOfPaymentsPerYear * loanPaymementPerMonth 
  let totalCostOfInterest = totalOfAllMonthlyPay - principal
-// the result will out put onto the label on the window
+// the result will output onto the label on the browser
 result.textContent = (`A $${principal} loan at ${interestRate}% for ${loanTerm} years would have a $${loanPaymementPerMonth.toFixed(2)}/month payment with a total interest of $${totalCostOfInterest.toFixed(2)}`)
- 
+
 }
   
 
