@@ -29,12 +29,12 @@
               <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="mortgageCalculator.html"
+              <a class="nav-link " href="mortgageCalculator.html"
                 >Mortgage Calculator</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="futureValueCalculator.html">Future Value Calculator</a>
+              <a class="nav-link active" href="futureValueCalculator.html">Future Value Calculator</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-disabled="true"
@@ -47,14 +47,14 @@
     </nav>
     <!-- creating input fields -->
     <div class="userInfoContainer">
-      <p>Principal:</p>
-      <input id="principal" type="text" />
+      <p>Deposit:</p>
+      <input id="deposit" type="number" />
       <br />
       <p>Interest Rate:</p>
-      <input id="interestRate" type="text" />
+      <input id="interestRate" type="number" />
       <br />
-      <p>Loan Term:</p>
-      <input id="loanTerm" type="text" />
+      <p>Term:</p>
+      <input id="termYears" type="number" />
       <br />
       <button id="calculateButton">Calculate</button>
     </div>
@@ -68,7 +68,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <!-- linked mortageCalculator.js to html -->
-    <script src="./scripts/mortgageCalculator.js"></script>
+    <!-- linked futureValueCalculator.js to html -->
+    <script src="./scripts/futureValueCalculator.js"></script>
   </body>
 </html>
