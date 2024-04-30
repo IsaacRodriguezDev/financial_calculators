@@ -1,16 +1,27 @@
 
 // created a constant variable for calculated buttons 
     const calculateButton = document.querySelector("#calculateButton")
-// wired up the calculate function to the calculate button
-    calculateButton.addEventListener("click", calculate)
+    const resetButton = document.querySelector("#resetButton");
+// created variable for the calculated label 
+let result = document.querySelector("#calculatedResults")
 
-// created a function to calculate the users input
-function calculate(){
+// created a if statement if reset button is clicked clear the input boxes else calculate when calculate button is pressed
+    
+if(resetButton.addEventListener('click', function(){
+    document.querySelector("#principal").value = ''
+    document.querySelector("#interestRate").value = ''
+    document.querySelector("#loanTerm").value = ''
+      
+     result.textContent = ''
+})){
+
+}else{
+    // created a function to calculate the users input
+    calculateButton.addEventListener("click", function calculate(){
     // created variables from the input fields and label
 let principal = Number( document.querySelector("#principal").value)
 let interestRate = Number(document.querySelector("#interestRate").value)
 let loanTerm =  Number(document.querySelector('#loanTerm').value)
-let result = document.querySelector("#calculatedResults")
 
 // created a variable for number of months in a year
 let numberOfPaymentsPerYear= 12
@@ -29,8 +40,10 @@ let totalOfAllMonthlyPay = loanTerm * numberOfPaymentsPerYear * loanPaymementPer
 // the result will output onto the label on the browser
 result.textContent = (`A $${principal} loan at ${interestRate}% for ${loanTerm} years would have a $${loanPaymementPerMonth.toFixed(2)}/month payment with a total interest of $${totalCostOfInterest.toFixed(2)}`)
 
-}
+})
   
+}
+
 
 
 
