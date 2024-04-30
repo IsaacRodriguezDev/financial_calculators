@@ -8,12 +8,13 @@ calculateButton.addEventListener("click", function () {
   let interestRate = Number(document.querySelector("#interestRate").value);
   let termYears = Number(document.querySelector("#termYears").value);
   let result = document.querySelector("#calculatedResults");
-
+  let compound = Number(document.querySelector('#compound').value)
+  
   // converted percent into decimal
   let interest = interestRate / 100;
 
   // created a formula to calculate the future value and assiged it to futreValueFactor variable
-  let futureValueFactor = deposit * (1 + interest) ** termYears;
+  let futureValueFactor = deposit * (1 + interest/compound) ** (termYears*compound)
 
 //   calculating how much user earned in interest
     let interestEarned = futureValueFactor - deposit
